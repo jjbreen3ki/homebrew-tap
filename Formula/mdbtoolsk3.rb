@@ -21,8 +21,7 @@ class Mdbtoolsk3 < Formula
   end
 
   def install
-    ENV.prepend_path "PATH", "/opt/local/bin"
-    system "autoreconf", "--force", "--install", "--verbose"
+    system "autoreconf", "--force", "--install", "--verbose", "-I", "#{ENV["HOMEBREW_PREFIX"]}/share/gettext/m4"
     system "./configure", "--enable-man", "--program-suffix=-k3", *std_configure_args
     system "make", "install"
   end
