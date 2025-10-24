@@ -5,6 +5,13 @@ class Mdbtoolsk3 < Formula
   sha256 "87750c369d966137ecbc7a842eb6f7c4452dd70959e59e5583394ea57fbab024"
   license "GPL-2.0-or-later"
 
+  bottle do
+    root_url "https://github.com/jjbreen3ki/homebrew-tap/releases/download/mdbtoolsk3-1.0.1"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:  "4d623086f11226cf5b267b4069ed1ad8514ee80f32303f78dbbc7f7bfa269de4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cc274244ae10d7fe4e1f33ed3e717b9183520fe9bc885f7b4d7040ad8754064d"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "bison" => :build
