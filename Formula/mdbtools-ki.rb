@@ -5,6 +5,12 @@ class MdbtoolsKi < Formula
   sha256 "87750c369d966137ecbc7a842eb6f7c4452dd70959e59e5583394ea57fbab024"
   license "GPL-2.0-or-later"
 
+  bottle do
+    root_url "https://github.com/jjbreen3ki/homebrew-tap/releases/download/mdbtools-ki-1.0.1"
+    sha256 cellar: :any,                 arm64_tahoe:  "ad429c0fa5a13a3eacf7a3d677e6518ff3bfa79bedc97a7fb8616ed3834bfdc3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "29c5ace23d21fb30ef94e4b6ef16650257546c64e57361406928461f481a09ee"
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "bison" => :build
