@@ -1,5 +1,5 @@
 class Mdbtoolsk3 < Formula
-  desc "MDB Tools - Read Access databases on *nix"
+  desc "MDB Tools - Read Access databases on *nix k3"
   homepage "https://github.com/jjbreen3ki/mdbtools-ki"
   url "https://github.com/jjbreen3ki/mdbtools-ki/archive/refs/tags/1.0.1-b.tar.gz"
   sha256 "87750c369d966137ecbc7a842eb6f7c4452dd70959e59e5583394ea57fbab024"
@@ -21,6 +21,7 @@ class Mdbtoolsk3 < Formula
   end
 
   def install
+    ENV.prepend_path "PATH", "/opt/local/bin"
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--enable-man", "--program-suffix=-k3", *std_configure_args
     system "make", "install"
