@@ -10,7 +10,7 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ ubuntu-22.04, macos-15-intel, macos-26 ]
+        os: [ ubuntu-22.04, macos-15-intel, arm64_tahoe, arm64_sequoia, arm64_sonoma, arm64_ventura, sequoia, ventura, sonoma, macos-26 ]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
